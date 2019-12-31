@@ -17,7 +17,6 @@ use PHPUnit\Framework\TestCase as PhpUnitTestCase;
  */
 abstract class TestCase extends PhpUnitTestCase
 {
-    protected const OVERLOAD = 'overload:';
 
     /** @var Generator */
     protected $faker;

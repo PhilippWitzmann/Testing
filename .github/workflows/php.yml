@@ -17,4 +17,7 @@ jobs:
       run: vendor/bin/phpunit --configuration config/phpunit.xml
 
     - name: Check codestyle
-      run: vendor/bin/phpcs --extensions=php --standard=./vendor/philippwitzmann/codingstandard/src/phpcs/Production/rulesetWithoutPHPC.xml src
+      run:
+        - vendor/bin/phpcs --extensions=php --standard=./vendor/philippwitzmann/codingstandard/src/phpcs/Production/rulesetWithoutPHPC.xml src
+        - vendor/bin/phpmd src text ./vendor/philippwitzmann/codingstandard/src/phpmd/phpmd.xml --suffixes php
+        - vendor/bin/phpstan --level=max analyse src
