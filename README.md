@@ -34,3 +34,13 @@ class SomeClassTest extends TestCase
     }
 }
 ```
+
+## Running tests
+```bash
+phpunit --configuration config/phpunit.xml
+```
+
+## Checking codestyle
+```bash
+phpcs 
+```
